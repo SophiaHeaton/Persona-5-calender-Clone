@@ -1,0 +1,92 @@
+@mixin background{
+    //https://www.spriters-resource.com/playstation_3/persona5/sheet/92732/
+    background-image: url("Background.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+}
+
+@mixin textcenter {
+    font-family: 'Sedgwick Ave Display', cursive;
+    position: absolute;
+    font-size: 4.5em;
+    color: black;
+    padding-top: 19%;
+    display: flex;
+}
+
+@mixin textSide {
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding-top: 19%;
+    font-size: 4.5em;
+    color: black;
+    position: absolute;
+    font-size: 3em;
+}
+
+@mixin title-text{
+    display: block;
+    position: absolute;
+    font-family: 'Sedgwick Ave Display', cursive; 
+    text-align: left;
+    color: black;
+    margin: auto;
+    font-size: 4em;
+    padding-left: 60px;
+    padding-top: 50px;
+    
+}
+
+body {
+    @include background;
+}
+
+
+
+.Title {
+    @include title-text;
+}
+
+.websites {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.WebTextg, .WebTextw {
+    @include textSide;
+}
+
+.WebTextp {
+    @include textcenter;
+}
+
+.gallery {
+    position: relative;
+    top: -250px;
+    left: 235px;
+    width: 150px;
+    height: 130px;
+}
+
+
+.pinterest {
+    position: relative;
+    top: -250px;
+    padding-left: 76%;
+    width: 150px;
+    height: 130px;
+}
+
+.Shadowp {
+    position: relative;
+    top: -50px;
+    left: 30px;
+}
