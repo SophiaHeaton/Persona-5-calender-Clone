@@ -10,7 +10,7 @@
     -o-background-size: 100% 100%;
 }
 
-@mixin textcenter {
+@mixin text {
     font-family: 'Sedgwick Ave Display', cursive;
     position: absolute;
     font-size: 4.5em;
@@ -45,13 +45,14 @@ body {
     @include background;
 }
 
-
-
 .Title {
     @include title-text;
+    color: #fff;
+    stroke: 6px #000;
 }
 
-.websites {
+.date {
+    @include text;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -60,33 +61,19 @@ body {
     position: relative;
 }
 
-.WebTextg, .WebTextw {
-    @include textSide;
-}
-
-.WebTextp {
-    @include textcenter;
-}
-
-.gallery {
+.yesterday {
     position: relative;
-    top: -250px;
-    left: 235px;
-    width: 150px;
-    height: 130px;
 }
 
 
-.pinterest {
+.today {
     position: relative;
-    top: -250px;
-    padding-left: 76%;
-    width: 150px;
-    height: 130px;
 }
 
-.Shadowp {
+.tomorrow {
     position: relative;
-    top: -50px;
-    left: 30px;
+}
+
+.week {
+    margin-top: -63px;
 }
