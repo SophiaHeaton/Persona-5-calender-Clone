@@ -1,0 +1,82 @@
+@mixin background{
+    //https://www.spriters-resource.com/playstation_3/persona5/sheet/92732/
+    background-image: url("Background.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+@mixin text {
+    font-family: 'Sedgwick Ave Display', cursive;
+    position: absolute;
+    font-size: 4.5em;
+    color: black;
+    padding-top: 19%;
+    display: flex;
+}
+
+@mixin textSide {
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding-top: 19%;
+    font-size: 4.5em;
+    color: black;
+    position: absolute;
+    font-size: 3em;
+}
+
+@mixin title-text{
+    display: block;
+    position: absolute;
+    font-family: 'Sedgwick Ave Display', cursive; 
+    text-align: left;
+    color: black;
+    margin: auto;
+    font-size: 4em;
+    padding-left: 60px;
+    padding-top: 50px;
+    
+}
+
+body {
+    @include background;
+}
+
+.Title {
+    @include title-text;
+    color: #fff;
+    stroke: 6px #000;
+}
+
+.date {
+    @include text;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.yesterday {
+    position: relative;
+
+}
+
+
+.today {
+    position: relative;
+}
+
+.tomorrow {
+    position: relative;
+}
+
+.week {
+    margin-top: -70px;
+}
+
+.Cell {
+    top: 0%;
+    align-items: center;
+}
